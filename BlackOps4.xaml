@@ -11,52 +11,59 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="80*"/>
-            <ColumnDefinition Width="102*"/>
+            <ColumnDefinition Width="22*"/>
+            <ColumnDefinition Width="80*"/>
             <ColumnDefinition Width="47*"/>
             <ColumnDefinition Width="563*"/>
         </Grid.ColumnDefinitions>
-        <TabControl Name ="tc_BO4" HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="792" Margin="0,-26,0,0" Grid.ColumnSpan="4">
+        <TabControl Name ="tc_BO4" HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="792" Margin="0,-26,0,0" Grid.ColumnSpan="5">
             <TabItem Header="Map Selection">
                 <Grid Background="#FF111111" Margin="-11,0,-8,0">
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="22*"/>
-                        <ColumnDefinition Width="139*"/>
-                    </Grid.ColumnDefinitions>
-                    <Button x:Name="Alpha_btn" Background="Transparent" Margin="24,43,572,251" BorderThickness="0" Click="Alpha_btn_Click" Grid.ColumnSpan="2" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4.png" />
+
+                    <Button x:Name="Alpha_btn" Background="Transparent" Margin="75,28,506,256" BorderThickness="0" Click="Alpha_btn_Click" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\alpha.png" Width="224" Height="114" />
                     </Button>
-                    <Button x:Name="Ancient_btn" Background="Transparent" Margin="24,166,572,128" BorderThickness="0" Click="Ancient_btn_Click" Grid.ColumnSpan="2" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO2Logo.png"/>
+                    <Button x:Name="Ancient_btn" Background="Transparent" Margin="84,154,511,140" BorderThickness="0" Click="Ancient_btn_Click" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\ae.jpg"/>
                     </Button>
-                    <Button x:Name="IX_btn" Background="Transparent" Margin="123,43,363,251" BorderThickness="0" Click="IX_btn_Click" Grid.Column="1" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO1Logo.png"/>
+                    <Button x:Name="IX_btn" Background="Transparent" Margin="304,28,256,271" BorderThickness="0" Click="IX_btn_Click" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\ix.jpg " Width="247"/>
                     </Button>
-                    <Button x:Name="voy_btn" Background="Transparent" Margin="123,166,363,128" BorderThickness="0" Click="voy_btn_Click" Grid.Column="1" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    <Button x:Name="voy_btn" Background="Transparent" Margin="509,279,-23,15" BorderThickness="0" Click="voy_btn_Click" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\voy.jpg" Height="113" Width="199"/>
                     </Button>
-                    <Button x:Name="Blood_btn" Background="Transparent" Margin="352,166,134,128" BorderThickness="0" Click="Blood_btn_Click" Grid.Column="1" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    <Button x:Name="Blood_btn" Background="Transparent" Margin="554,151,23,143" BorderThickness="0" Click="Blood_btn_Click" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\blood.jpg" Height="113" Width="214"/>
                     </Button>
-                    <Button x:Name="Call_btn" Background="Transparent" Margin="352,43,134,251" BorderThickness="0" Click="Call_btn_Click" Grid.Column="1" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    <Button x:Name="Call_btn" Background="Transparent" Margin="509,23,-23,271" BorderThickness="0" Click="Call_btn_Click" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\tag.png" Height="113" Width="209"/>
                     </Button>
-                    <Button x:Name="Class_btn" Background="Transparent" Margin="24,284,572,10" BorderThickness="0" Click="Class_btn_Click" Grid.ColumnSpan="2" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    <Button x:Name="Class_btn" Background="Transparent" Margin="322,279,269,15" BorderThickness="0" Click="Class_btn_Click" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\class.jpg" Height="115" Width="204"/>
                     </Button>
-                    <Button x:Name="Dead_btn" Background="Transparent" Margin="24,284,572,10" BorderThickness="0" Click="Dead_btn_Click" Grid.ColumnSpan="2" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    <Button x:Name="Dead_btn" Background="Transparent" Margin="314,151,269,143" BorderThickness="0" Click="Dead_btn_Click" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\dead.jpg" Height="118" Width="222"/>
                     </Button>
                 </Grid>
             </TabItem>
             <TabItem Header="Alpha">
-                <Grid Background="#FF111111">
+                <Grid Background="#FF111111" Margin="-8,0,0,0">
                     <Grid.ColumnDefinitions>
 
                         <ColumnDefinition Width="25*"/>
                         <ColumnDefinition Width="442*"/>
                         <ColumnDefinition Width="319*"/>
                     </Grid.ColumnDefinitions>
+
+
                     <Label Content="Alpha" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+
+                    <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Margin="206,10,10,307" Click="Button_Click">
+                        <StackPanel>
+                            <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4.png" />
+                        </StackPanel>
+                    </Button>
+
 
                 </Grid>
             </TabItem>

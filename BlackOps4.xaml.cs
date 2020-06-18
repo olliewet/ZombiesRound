@@ -63,5 +63,10 @@ namespace ZombiesRound
         {
             tc_BO4.SelectedIndex = 7;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            tc_BO4.SelectedIndex = 0;
+        }
     }
 }
