@@ -1,0 +1,101 @@
+﻿<Window x:Class="ZombiesRound.BlackOps4"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ZombiesRound"
+        mc:Ignorable="d"
+        WindowStartupLocation="Manual" 
+        Left="500" Top="300"
+        Title="BlackOps4" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="80*"/>
+            <ColumnDefinition Width="102*"/>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="563*"/>
+        </Grid.ColumnDefinitions>
+        <TabControl Name ="tc_BO4" HorizontalAlignment="Left" Height="445" VerticalAlignment="Top" Width="792" Margin="0,-26,0,0" Grid.ColumnSpan="4">
+            <TabItem Header="Map Selection">
+                <Grid Background="#FF111111" Margin="-11,0,-8,0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="22*"/>
+                        <ColumnDefinition Width="139*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="Alpha_btn" Background="Transparent" Margin="24,43,572,251" BorderThickness="0" Click="Alpha_btn_Click" Grid.ColumnSpan="2" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4.png" />
+                    </Button>
+                    <Button x:Name="Ancient_btn" Background="Transparent" Margin="24,166,572,128" BorderThickness="0" Click="Ancient_btn_Click" Grid.ColumnSpan="2" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO2Logo.png"/>
+                    </Button>
+                    <Button x:Name="IX_btn" Background="Transparent" Margin="123,43,363,251" BorderThickness="0" Click="IX_btn_Click" Grid.Column="1" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO1Logo.png"/>
+                    </Button>
+                    <Button x:Name="voy_btn" Background="Transparent" Margin="123,166,363,128" BorderThickness="0" Click="voy_btn_Click" Grid.Column="1" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    </Button>
+                    <Button x:Name="Blood_btn" Background="Transparent" Margin="352,166,134,128" BorderThickness="0" Click="Blood_btn_Click" Grid.Column="1" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    </Button>
+                    <Button x:Name="Call_btn" Background="Transparent" Margin="352,43,134,251" BorderThickness="0" Click="Call_btn_Click" Grid.Column="1" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    </Button>
+                    <Button x:Name="Class_btn" Background="Transparent" Margin="24,284,572,10" BorderThickness="0" Click="Class_btn_Click" Grid.ColumnSpan="2" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    </Button>
+                    <Button x:Name="Dead_btn" Background="Transparent" Margin="24,284,572,10" BorderThickness="0" Click="Dead_btn_Click" Grid.ColumnSpan="2" >
+                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\CodBO3.png" Height="77"/>
+                    </Button>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Alpha">
+                <Grid Background="#FF111111">
+                    <Grid.ColumnDefinitions>
+
+                        <ColumnDefinition Width="25*"/>
+                        <ColumnDefinition Width="442*"/>
+                        <ColumnDefinition Width="319*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Alpha" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+
+                </Grid>
+            </TabItem>
+            <TabItem Header="Anicent">
+                <Grid Background="#FF111111">
+                    <Label Content="Anicent" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="IX">
+                <Grid Background="#FF111111">
+                    <Label Content="IX" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Voyage">
+                <Grid Background="#FF111111">
+                    <Label Content="Voyage" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Blood of the dead">
+                <Grid Background="#FF111111">
+                    <Label Content="Blood" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Classified">
+                <Grid Background="#FF111111">
+                    <Label Content="Class" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Dead of the night">
+                <Grid Background="#FF111111">
+                    <Label Content="Dead" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="tag">
+                <Grid Background="#FF111111">
+                    <Label Content="tag" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                </Grid>
+            </TabItem>
+        </TabControl>
+
+    </Grid>
+</Window>

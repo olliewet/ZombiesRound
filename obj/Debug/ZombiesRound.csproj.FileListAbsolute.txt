@@ -1,0 +1,17 @@
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\bin\Debug\ZombiesRound.exe.config
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\bin\Debug\ZombiesRound.exe
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\bin\Debug\ZombiesRound.pdb
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\ZombiesRound.csprojAssemblyReference.cache
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\MainWindow.g.cs
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\App.g.cs
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\ZombiesRound_MarkupCompile.cache
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\ZombiesRound_MarkupCompile.lref
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\MainWindow.baml
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\ZombiesRound.g.resources
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\ZombiesRound.Properties.Resources.resources
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\ZombiesRound.csproj.GenerateResource.cache
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\ZombiesRound.csproj.CoreCompileInputs.cache
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\ZombiesRound.exe
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\ZombiesRound.pdb
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\BlackOps4.g.cs
+C:\Users\Ollie\Desktop\Work\Zombies Project\ZombiesRound\obj\Debug\BlackOps4.baml
