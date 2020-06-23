@@ -20,61 +20,68 @@
             <TabItem Header="Map Selection">
                 <Grid Background="#FF111111" Margin="-11,0,-8,0">
 
-                    <Button x:Name="Alpha_btn" Background="Transparent" Margin="75,28,506,256" BorderThickness="0" Click="Alpha_btn_Click" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\alpha.png" Width="224" Height="114" />
+                    <Button Foreground="White" Content="Alpha" x:Name="Alpha_btn" Background="Transparent" Margin="10,0,618,366" BorderThickness="0" Click="Alpha_btn_Click" >
+                        
                     </Button>
-                    <Button x:Name="Ancient_btn" Background="Transparent" Margin="84,154,511,140" BorderThickness="0" Click="Ancient_btn_Click" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\ae.jpg"/>
+                    <Button Foreground="White" Content="Anicent Evil" x:Name="Ancient_btn" Background="Transparent" Margin="10,51,618,315" BorderThickness="0" Click="Ancient_btn_Click" >
+                        
                     </Button>
-                    <Button x:Name="IX_btn" Background="Transparent" Margin="304,28,256,271" BorderThickness="0" Click="IX_btn_Click" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\ix.jpg " Width="247"/>
+                    <Button Foreground="White" Content="IX" x:Name="IX_btn" Background="Transparent" Margin="10,102,618,269" BorderThickness="0" Click="IX_btn_Click" >
+                        
                     </Button>
-                    <Button x:Name="voy_btn" Background="Transparent" Margin="509,279,-23,15" BorderThickness="0" Click="voy_btn_Click" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\voy.jpg" Height="113" Width="199"/>
+                    <Button Foreground="White" Content="Voyage of despair" x:Name="voy_btn" Background="Transparent" Margin="10,324,618,53" BorderThickness="0" Click="voy_btn_Click" >
                     </Button>
-                    <Button x:Name="Blood_btn" Background="Transparent" Margin="554,151,23,143" BorderThickness="0" Click="Blood_btn_Click" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\blood.jpg" Height="113" Width="214"/>
+                    <Button Foreground="White" Content="Blood" x:Name="Blood_btn" Background="Transparent" Margin="10,236,618,137" BorderThickness="0" Click="Blood_btn_Click" >
+                        
                     </Button>
-                    <Button x:Name="Call_btn" Background="Transparent" Margin="509,23,-23,271" BorderThickness="0" Click="Call_btn_Click" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\tag.png" Height="113" Width="209"/>
+                    <Button Foreground="White" Content="Tag der toten" x:Name="Call_btn" Background="Transparent" Margin="10,280,618,93" BorderThickness="0" Click="Call_btn_Click" >
                     </Button>
-                    <Button x:Name="Class_btn" Background="Transparent" Margin="322,279,269,15" BorderThickness="0" Click="Class_btn_Click" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\class.jpg" Height="115" Width="204"/>
+                    <Button Foreground="White" Content="Classified" x:Name="Class_btn" Background="Transparent" Margin="10,192,618,181" BorderThickness="0" Click="Class_btn_Click" >
+                        
                     </Button>
-                    <Button x:Name="Dead_btn" Background="Transparent" Margin="314,151,269,143" BorderThickness="0" Click="Dead_btn_Click" >
-                        <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\dead.jpg" Height="118" Width="222"/>
+                    <Button Foreground="White" Content="Dead of the Night" x:Name="Dead_btn" Background="Transparent" Margin="10,148,618,225" BorderThickness="0" Click="Dead_btn_Click" >
+                        
                     </Button>
                 </Grid>
             </TabItem>
             <TabItem Header="Alpha">
                 <Grid Background="#FF111111" Margin="-8,0,0,0">
                     <Grid.ColumnDefinitions>
-
                         <ColumnDefinition Width="25*"/>
                         <ColumnDefinition Width="442*"/>
                         <ColumnDefinition Width="319*"/>
                     </Grid.ColumnDefinitions>
-
-
+                    <ListBox x:Name ="listRounds" HorizontalAlignment="Left" Height="277" Margin="10,61,0,0" VerticalAlignment="Top" Width="190" SelectionChanged="listRounds_SelectionChanged" Grid.Column="1"/>
+                    <TextBox Name="myTextBox" HorizontalAlignment="Left" Height="32" Margin="10,343,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="190" Grid.Column="1"/>
                     <Label Content="Alpha" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <Button Content="Add Round" HorizontalAlignment="Left" Margin="211,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRound_Click" Grid.Column="1"/>
+                    <Button x:Name ="RemoveA_btn" Content="Remove Round" HorizontalAlignment="Left" Margin="211,306,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="RemoveA_btn_Click" Grid.Column="1"/>
 
                     <Button Background="Transparent" BorderThickness="0" Grid.Column="2" Margin="206,10,10,307" Click="Button_Click">
                         <StackPanel>
                             <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4.png" />
                         </StackPanel>
                     </Button>
-
-
                 </Grid>
             </TabItem>
             <TabItem Header="Anicent">
                 <Grid Background="#FF111111">
-                    <Label Content="Anicent" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="49*"/>
+                        <ColumnDefinition Width="737*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Content="Anicent" Foreground="White" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+                    <TextBox Name="myTextBoxA" HorizontalAlignment="Left" Height="32" Margin="10,343,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="190" Grid.ColumnSpan="2"/>
+                    <Button x:Name ="AddRoundAN" Content="Add Round" HorizontalAlignment="Left" Margin="162,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRoundAN_Click" Grid.Column="1"/>
+                    <ListBox x:Name ="listAnicent" HorizontalAlignment="Left" Height="277" Margin="10,61,0,0" VerticalAlignment="Top" Width="190" SelectionChanged="listRounds_SelectionChanged" Grid.ColumnSpan="2"/>
                 </Grid>
             </TabItem>
             <TabItem Header="IX">
                 <Grid Background="#FF111111">
                     <Label Content="IX" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="myTextBoxI" HorizontalAlignment="Left" Height="32" Margin="10,343,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="190" Grid.Column="1"/>
+                    <Button x:Name ="AddRoundIX" Content="Add Round" HorizontalAlignment="Left" Margin="211,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRoundIX_Click" Grid.Column="1"/>
+                    <ListBox x:Name ="listIX" HorizontalAlignment="Left" Height="277" Margin="10,61,0,0" VerticalAlignment="Top" Width="190" SelectionChanged="listRounds_SelectionChanged" Grid.Column="1"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Voyage">
