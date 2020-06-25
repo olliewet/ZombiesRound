@@ -28,8 +28,6 @@ namespace ZombiesRound
         string queryC = "select * from ZombiesRounds where Map='IX'";
         string queryR = "delete from ZombiesRounds where id = @ZombiesRoundsId";
 
-
-
         public BlackOps4()
         {            
             InitializeComponent();
@@ -38,10 +36,10 @@ namespace ZombiesRound
             sqlConnection = new SqlConnection(connectionString);
             SqlConnect.ShowRound(listRounds, queryA,sqlConnection);
             SqlConnect.ShowRound(listAnicent, queryB,sqlConnection);
-            SqlConnect.ShowRound(listIX, queryC, sqlConnection);
-            
-
-        }       
+            SqlConnect.ShowRound(listIX, queryC, sqlConnection);          
+        }    
+        
+        //Method for clearing the text
         private void cleartextbox()
         {
             myTextBox.Clear();
@@ -49,6 +47,7 @@ namespace ZombiesRound
             myTextBoxI.Clear();
         }
 
+        #region Button Clicks
         private void Alpha_btn_Click(object sender, RoutedEventArgs e)
         {
             tc_BO4.SelectedIndex = 1;
@@ -104,18 +103,18 @@ namespace ZombiesRound
         }
 
         private void AddRound_Click(object sender, RoutedEventArgs e)
-        {         
-                string text;
-                int round;
-                string map = "Alpha";
-                text = myTextBox.Text;
-                              
-                if (!int.TryParse(text, out round))
-                    {
-                        MessageBox.Show("Not an integer");
-                    }
+        {
+            string text;
+            int round;
+            string map = "Alpha";
+            text = myTextBox.Text;
 
-                else                   
+            if (!int.TryParse(text, out round))
+            {
+                MessageBox.Show("Not an integer");
+            }
+
+            else
             {
                 SqlConnect.AddRound(listRounds, queryA, sqlConnection, map, round);
                 SqlConnect.ShowRound(listRounds, queryA, sqlConnection);
@@ -165,11 +164,27 @@ namespace ZombiesRound
                 SqlConnect.ShowRound(listAnicent, queryB, sqlConnection);
             }
         }
+        #endregion
 
+        #region Remove Buttons
         private void RemoveA_btn_Click(object sender, RoutedEventArgs e)
-        {           
+        {
             SqlConnect.RemoveRound(listRounds, queryR, sqlConnection);
             SqlConnect.ShowRound(listRounds, queryA, sqlConnection);
         }
+
+        private void RemoveAN_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnect.RemoveRound(listAnicent, queryR, sqlConnection);
+            SqlConnect.ShowRound(listAnicent, queryB, sqlConnection);
+        }
+
+        private void RemoveIX_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnect.RemoveRound(listIX, queryR, sqlConnection);
+            SqlConnect.ShowRound(listIX, queryC, sqlConnection);
+        }
+        #endregion
+
     }
 }
