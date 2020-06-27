@@ -86,8 +86,8 @@
 
                     <Label Content="Anicent" Foreground="White" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
                     <TextBox Name="myTextBoxA" HorizontalAlignment="Left" Height="32" Margin="10,343,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="190"/>
-                    <Button x:Name ="AddRoundAN" Content="Add Round" HorizontalAlignment="Left" Margin="14,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRoundAN_Click"/>
-                    <Button x:Name ="RemoveAN_btn" Content="Remove Round" HorizontalAlignment="Left" Margin="14,306,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="RemoveAN_btn_Click"/>
+                    <Button x:Name ="AddRoundAN" Content="Add Round" HorizontalAlignment="Left" Margin="10,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRoundAN_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
+                    <Button x:Name ="RemoveAN_btn" Content="Remove Round" HorizontalAlignment="Left" Margin="10,306,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="RemoveAN_btn_Click" Grid.ColumnSpan="2" Grid.Column="1"/>
                     <Button x:Name ="HomeA"  Background="Transparent" BorderThickness="0"  Margin="386.667,10,16,0" VerticalAlignment="Top" Width="150" Height="100" Click="HomeA_Click" Grid.Column="2">
                         <StackPanel>
                             <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4.png" Height="78" Width="103"  />
@@ -179,10 +179,24 @@
             </TabItem>
             <TabItem Header="Dead of the night">
                 <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="77*"/>
+                        <ColumnDefinition Width="316*"/>
+                    </Grid.ColumnDefinitions>
                     <Grid.Background>
                         <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\dead.jpg" Stretch="UniformToFill"/>
                     </Grid.Background>
-                    <Label Content="Dead" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <Label Content="Dead" Foreground="White" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+
+                    <TextBox Name="mytextboxD" HorizontalAlignment="Left" Height="32" Margin="10,343,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="190" Grid.ColumnSpan="2"/>
+                    <Button x:Name ="AddRoundD" Content="Add Round" HorizontalAlignment="Left" Margin="57,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRoundD_Click" Grid.Column="1"/>
+                    <ListBox x:Name ="listD" HorizontalAlignment="Left" Height="277" Margin="10,61,0,0" VerticalAlignment="Top" Width="190" SelectionChanged="listD_SelectionChanged" Grid.ColumnSpan="2"/>
+                    <Button x:Name ="RemoveD_btn" Content="Remove Round" HorizontalAlignment="Left" Margin="57,306,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="RemoveD_btn_Click" Grid.Column="1"/>
+                    <Button x:Name ="HomeD"  Background="Transparent" BorderThickness="0"  Margin="472,10,10,0" VerticalAlignment="Top" Width="150" Height="100" Click="HomeD_Click" Grid.Column="1">
+                        <StackPanel>
+                            <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4.png" Height="78" Width="103"  />
+                        </StackPanel>
+                    </Button>
                 </Grid>
             </TabItem>
             <TabItem Header="tag">

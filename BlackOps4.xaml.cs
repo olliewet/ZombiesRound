@@ -30,6 +30,7 @@ namespace ZombiesRound
         string queryD = "select * from ZombiesRounds where Map='Voyage'";
         string queryE = "select * from ZombiesRounds where Map='Blood'";
         string queryF = "select * from ZombiesRounds where Map='Class'";
+        string queryDE = "select * from ZombiesRounds where Map='Dead'";
         string queryR = "delete from ZombiesRounds where id = @ZombiesRoundsId";
         #endregion
 
@@ -44,6 +45,8 @@ namespace ZombiesRound
             SqlConnect.ShowRound(listIX, queryC, sqlConnection);
             SqlConnect.ShowRound(listV, queryD, sqlConnection);
             SqlConnect.ShowRound(listB, queryE, sqlConnection);
+            SqlConnect.ShowRound(listC, queryF, sqlConnection);
+            SqlConnect.ShowRound(listD, queryDE, sqlConnection);
         }    
                        
 
@@ -219,6 +222,25 @@ namespace ZombiesRound
             }
         }
 
+        private void AddRoundD_Click(object sender, RoutedEventArgs e)
+        {
+            string text;
+            int round;
+            string map = "Dead";
+            text = mytextboxD.Text;
+
+            if (!int.TryParse(text, out round))
+            {
+                MessageBox.Show("Not an integer");
+            }
+
+            else
+            {
+                SqlConnect.AddRound(listD, queryDE, sqlConnection, map, round);
+                SqlConnect.ShowRound(listD, queryDE, sqlConnection);
+            }
+        }
+
         #endregion 
 
         #region Selection Changed
@@ -238,41 +260,104 @@ namespace ZombiesRound
         {
 
         }
+        private void listD_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
         #endregion
 
         #region Remove Buttons
         private void RemoveA_btn_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnect.RemoveRound(listRounds, queryR, sqlConnection);
-            SqlConnect.ShowRound(listRounds, queryA, sqlConnection);
+            //If nothing is selected 
+            if (listRounds.SelectedIndex == -1)             
+            {
+                MessageBox.Show("Select a round!");
+            }
+            else
+            {
+
+
+                SqlConnect.RemoveRound(listRounds, queryR, sqlConnection);
+                SqlConnect.ShowRound(listRounds, queryA, sqlConnection);
+            }
         }
 
         private void RemoveAN_btn_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnect.RemoveRound(listAnicent, queryR, sqlConnection);
-            SqlConnect.ShowRound(listAnicent, queryB, sqlConnection);
+            if (listRounds.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select a round!");
+            }
+            else
+            {
+                SqlConnect.RemoveRound(listAnicent, queryR, sqlConnection);
+                SqlConnect.ShowRound(listAnicent, queryB, sqlConnection);
+            }
+
         }
 
         private void RemoveIX_btn_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnect.RemoveRound(listIX, queryR, sqlConnection);
-            SqlConnect.ShowRound(listIX, queryC, sqlConnection);
+            if (listIX.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select a round!");
+            }
+            else
+            {
+                SqlConnect.RemoveRound(listIX, queryR, sqlConnection);
+                SqlConnect.ShowRound(listIX, queryC, sqlConnection);
+            }
         }
         private void RemoveV_btn_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnect.RemoveRound(listV, queryR, sqlConnection);
-            SqlConnect.ShowRound(listV, queryD, sqlConnection);
+            if (listV.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select a round!");
+            }
+            else
+            {
+                SqlConnect.RemoveRound(listV, queryR, sqlConnection);
+                SqlConnect.ShowRound(listV, queryD, sqlConnection);
+            }
         }
 
         private void RemoveB_btn_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnect.RemoveRound(listV, queryR, sqlConnection);
-            SqlConnect.ShowRound(listV, queryE, sqlConnection);
+            if (listB.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select a round!");
+            }
+            else
+            {
+                SqlConnect.RemoveRound(listV, queryR, sqlConnection);
+                SqlConnect.ShowRound(listV, queryE, sqlConnection);
+            }
         }
         private void RemoveC_btn_Click(object sender, RoutedEventArgs e)
         {
-            SqlConnect.RemoveRound(listC, queryR, sqlConnection);
-            SqlConnect.ShowRound(listC, queryF, sqlConnection);
+            if (listC.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select a round!");
+            }
+            else
+            {
+                SqlConnect.RemoveRound(listC, queryR, sqlConnection);
+                SqlConnect.ShowRound(listC, queryF, sqlConnection);
+            }
+        }
+
+        private void RemoveD_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (listD.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select a round!");
+            }
+            else
+            {
+                SqlConnect.RemoveRound(listD, queryR, sqlConnection);
+                SqlConnect.ShowRound(listD, queryDE, sqlConnection);
+            }
         }
 
         #endregion
@@ -300,6 +385,10 @@ namespace ZombiesRound
         {
             home();
         }
+        private void HomeD_Click(object sender, RoutedEventArgs e)
+        {
+            home();
+        }
         #endregion
 
         #region Misc Methods 
@@ -311,6 +400,8 @@ namespace ZombiesRound
             mytextboxV.Clear();
             mytextboxB.Clear();
             mytextboxC.Clear();
+            mytextboxD.Clear();
+            
         }
         private void home()
         {
@@ -325,13 +416,14 @@ namespace ZombiesRound
 
 
 
+
+
+
+
+
+
         #endregion
 
-        
-      
-
-       
-
-       
+          
     }
 }
