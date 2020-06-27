@@ -22,11 +22,15 @@ namespace ZombiesRound
     /// </summary>
     public partial class BlackOps4 : Window
     {
+        #region Variables and Query
         public static SqlConnection sqlConnection;
         string queryA = "select * from ZombiesRounds where Map='Alpha' ";
         string queryB = "select * from ZombiesRounds where Map='Ancient'";
         string queryC = "select * from ZombiesRounds where Map='IX'";
+        string queryD = "select * from ZombiesRounds where Map='Voyage'";
+        string queryE = "select * from ZombiesRounds where Map='Blood'";
         string queryR = "delete from ZombiesRounds where id = @ZombiesRoundsId";
+        #endregion
 
         public BlackOps4()
         {            
@@ -36,16 +40,11 @@ namespace ZombiesRound
             sqlConnection = new SqlConnection(connectionString);
             SqlConnect.ShowRound(listRounds, queryA,sqlConnection);
             SqlConnect.ShowRound(listAnicent, queryB,sqlConnection);
-            SqlConnect.ShowRound(listIX, queryC, sqlConnection);          
+            SqlConnect.ShowRound(listIX, queryC, sqlConnection);
+            SqlConnect.ShowRound(listV, queryD, sqlConnection);
+            SqlConnect.ShowRound(listB, queryE, sqlConnection);
         }    
-        
-        //Method for clearing the text
-        private void cleartextbox()
-        {
-            myTextBox.Clear();
-            myTextBoxA.Clear();
-            myTextBoxI.Clear();
-        }
+                       
 
         #region Button Clicks
         private void Alpha_btn_Click(object sender, RoutedEventArgs e)
@@ -101,7 +100,11 @@ namespace ZombiesRound
             tc_BO4.SelectedIndex = 0;
             cleartextbox();
         }
+       
 
+        #endregion
+
+        #region Add Rounds 
         private void AddRound_Click(object sender, RoutedEventArgs e)
         {
             string text;
@@ -119,11 +122,6 @@ namespace ZombiesRound
                 SqlConnect.AddRound(listRounds, queryA, sqlConnection, map, round);
                 SqlConnect.ShowRound(listRounds, queryA, sqlConnection);
             }
-
-        }
-
-        private void listRounds_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
 
         }
 
@@ -164,6 +162,58 @@ namespace ZombiesRound
                 SqlConnect.ShowRound(listAnicent, queryB, sqlConnection);
             }
         }
+        private void AddRoundV_Click(object sender, RoutedEventArgs e)
+        {
+            string text;
+            int round;
+            string map = "Voyage";
+            text = mytextboxV.Text;
+
+            if (!int.TryParse(text, out round))
+            {
+                MessageBox.Show("Not an integer");
+            }
+
+            else
+            {
+                SqlConnect.AddRound(listV, queryD, sqlConnection, map, round);
+                SqlConnect.ShowRound(listV, queryD, sqlConnection);
+            }
+        }
+
+        private void AddRoundB_Click(object sender, RoutedEventArgs e)
+        {
+            string text;
+            int round;
+            string map = "Blood";
+            text = mytextboxB.Text;
+
+            if (!int.TryParse(text, out round))
+            {
+                MessageBox.Show("Not an integer");
+            }
+
+            else
+            {
+                SqlConnect.AddRound(listB, queryE, sqlConnection, map, round);
+                SqlConnect.ShowRound(listB, queryE, sqlConnection);
+            }
+        }
+        #endregion 
+
+        #region Selection Changed
+        private void listRounds_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        private void listV_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        private void listB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
         #endregion
 
         #region Remove Buttons
@@ -184,7 +234,63 @@ namespace ZombiesRound
             SqlConnect.RemoveRound(listIX, queryR, sqlConnection);
             SqlConnect.ShowRound(listIX, queryC, sqlConnection);
         }
+        private void RemoveV_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnect.RemoveRound(listV, queryR, sqlConnection);
+            SqlConnect.ShowRound(listV, queryD, sqlConnection);
+        }
+
+        private void RemoveB_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnect.RemoveRound(listV, queryR, sqlConnection);
+            SqlConnect.ShowRound(listV, queryE, sqlConnection);
+        }
         #endregion
+
+        #region Home 
+        private void HomeA_Click(object sender, RoutedEventArgs e)
+        {
+            home();
+        }
+
+        private void HomeIX_Click(object sender, RoutedEventArgs e)
+        {
+            home();
+        }
+
+        private void HomeV_Click(object sender, RoutedEventArgs e)
+        {
+            home();
+        }
+        private void HomeB_Click(object sender, RoutedEventArgs e)
+        {
+            home();
+        }
+        #endregion
+
+        #region Misc Methods 
+        private void cleartextbox()
+        {
+            myTextBox.Clear();
+            myTextBoxA.Clear();
+            myTextBoxI.Clear();
+            mytextboxV.Clear();
+            mytextboxB.Clear();
+        }
+        private void home()
+        {
+            tc_BO4.SelectedIndex = 0;
+            cleartextbox();
+        }
+
+
+        #endregion
+
+       
+
+       
+
+      
 
     }
 }
