@@ -29,6 +29,7 @@ namespace ZombiesRound
         string queryC = "select * from ZombiesRounds where Map='IX'";
         string queryD = "select * from ZombiesRounds where Map='Voyage'";
         string queryE = "select * from ZombiesRounds where Map='Blood'";
+        string queryF = "select * from ZombiesRounds where Map='Class'";
         string queryR = "delete from ZombiesRounds where id = @ZombiesRoundsId";
         #endregion
 
@@ -199,6 +200,25 @@ namespace ZombiesRound
                 SqlConnect.ShowRound(listB, queryE, sqlConnection);
             }
         }
+        private void AddRoundC_Click(object sender, RoutedEventArgs e)
+        {
+            string text;
+            int round;
+            string map = "Class";
+            text = mytextboxC.Text;
+
+            if (!int.TryParse(text, out round))
+            {
+                MessageBox.Show("Not an integer");
+            }
+
+            else
+            {
+                SqlConnect.AddRound(listC, queryF, sqlConnection, map, round);
+                SqlConnect.ShowRound(listC, queryF, sqlConnection);
+            }
+        }
+
         #endregion 
 
         #region Selection Changed
@@ -211,6 +231,10 @@ namespace ZombiesRound
 
         }
         private void listB_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+        private void listC_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
@@ -245,6 +269,12 @@ namespace ZombiesRound
             SqlConnect.RemoveRound(listV, queryR, sqlConnection);
             SqlConnect.ShowRound(listV, queryE, sqlConnection);
         }
+        private void RemoveC_btn_Click(object sender, RoutedEventArgs e)
+        {
+            SqlConnect.RemoveRound(listC, queryR, sqlConnection);
+            SqlConnect.ShowRound(listC, queryF, sqlConnection);
+        }
+
         #endregion
 
         #region Home 
@@ -266,6 +296,10 @@ namespace ZombiesRound
         {
             home();
         }
+        private void HomeC_Click(object sender, RoutedEventArgs e)
+        {
+            home();
+        }
         #endregion
 
         #region Misc Methods 
@@ -276,6 +310,7 @@ namespace ZombiesRound
             myTextBoxI.Clear();
             mytextboxV.Clear();
             mytextboxB.Clear();
+            mytextboxC.Clear();
         }
         private void home()
         {
@@ -284,13 +319,19 @@ namespace ZombiesRound
         }
 
 
+
+
+
+
+
+
         #endregion
 
-       
-
-       
-
+        
       
 
+       
+
+       
     }
 }

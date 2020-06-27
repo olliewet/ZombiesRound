@@ -126,7 +126,10 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Voyage">
-                <Grid Background="#FF111111">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\voy.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
                     <Label Content="Voyage" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
                     <TextBox Name="mytextboxV" HorizontalAlignment="Left" Height="32" Margin="10,343,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="190" Grid.Column="1"/>
                     <Button x:Name ="AddRoundV" Content="Add Round" HorizontalAlignment="Left" Margin="211,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRoundV_Click" Grid.Column="1"/>
@@ -140,9 +143,12 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Blood of the dead">
-                <Grid Background="#FF111111">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\blood.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
                     <Label Content="Blood" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
-                    
+
                     <TextBox Name="mytextboxB" HorizontalAlignment="Left" Height="32" Margin="10,343,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="190" Grid.Column="1"/>
                     <Button x:Name ="AddRoundB" Content="Add Round" HorizontalAlignment="Left" Margin="211,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRoundB_Click" Grid.Column="1"/>
                     <ListBox x:Name ="listB" HorizontalAlignment="Left" Height="277" Margin="10,61,0,0" VerticalAlignment="Top" Width="190" SelectionChanged="listB_SelectionChanged" Grid.Column="1"/>
@@ -155,17 +161,35 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Classified">
-                <Grid Background="#FF111111">
-                    <Label Content="Class" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\class.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
+                    <Label Content="Class" Foreground="White" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="mytextboxC" HorizontalAlignment="Left" Height="32" Margin="10,343,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="190" Grid.Column="1"/>
+                    <Button x:Name ="AddRoundC" Content="Add Round" HorizontalAlignment="Left" Margin="211,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRoundC_Click" Grid.Column="1"/>
+                    <ListBox x:Name ="listC" HorizontalAlignment="Left" Height="277" Margin="10,61,0,0" VerticalAlignment="Top" Width="190" SelectionChanged="listC_SelectionChanged" Grid.Column="1"/>
+                    <Button x:Name ="RemoveC_btn" Content="Remove Round" HorizontalAlignment="Left" Margin="211,306,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="RemoveC_btn_Click"/>
+                    <Button x:Name ="HomeC"  Background="Transparent" BorderThickness="0"  Margin="626,10,10,0" VerticalAlignment="Top" Width="150" Height="100" Click="HomeC_Click">
+                        <StackPanel>
+                            <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4.png" Height="78" Width="103"  />
+                        </StackPanel>
+                    </Button>
                 </Grid>
             </TabItem>
             <TabItem Header="Dead of the night">
-                <Grid Background="#FF111111">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\dead.jpg" Stretch="UniformToFill"/>
+                    </Grid.Background>
                     <Label Content="Dead" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
             <TabItem Header="tag">
-                <Grid Background="#FF111111">
+                <Grid>
+                    <Grid.Background>
+                        <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\tag.png" Stretch="UniformToFill"/>
+                    </Grid.Background>
                     <Label Content="tag" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
                 </Grid>
             </TabItem>
