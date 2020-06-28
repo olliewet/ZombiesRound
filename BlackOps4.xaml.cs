@@ -48,6 +48,7 @@ namespace ZombiesRound
             SqlConnect.ShowRound(listB, queryE, sqlConnection);
             SqlConnect.ShowRound(listC, queryF, sqlConnection);
             SqlConnect.ShowRound(listD, queryDE, sqlConnection);
+            SqlConnect.ShowRound(listT, queryT, sqlConnection);
         }    
                        
 
@@ -255,8 +256,8 @@ namespace ZombiesRound
 
             else
             {
-                SqlConnect.AddRound(listD, queryT, sqlConnection, map, round);
-                SqlConnect.ShowRound(listD, queryT, sqlConnection);
+                SqlConnect.AddRound(listT, queryT, sqlConnection, map, round);
+                SqlConnect.ShowRound(listT, queryT, sqlConnection);
             }
         }
 
@@ -304,9 +305,10 @@ namespace ZombiesRound
             }
         }
 
+        
         private void RemoveAN_btn_Click(object sender, RoutedEventArgs e)
         {
-            if (listRounds.SelectedIndex == -1)
+            if (listAnicent.SelectedIndex == -1)
             {
                 MessageBox.Show("Select a round!");
             }
@@ -351,8 +353,8 @@ namespace ZombiesRound
             }
             else
             {
-                SqlConnect.RemoveRound(listV, queryR, sqlConnection);
-                SqlConnect.ShowRound(listV, queryE, sqlConnection);
+                SqlConnect.RemoveRound(listB, queryR, sqlConnection);
+                SqlConnect.ShowRound(listB, queryE, sqlConnection);
             }
         }
         private void RemoveC_btn_Click(object sender, RoutedEventArgs e)
@@ -384,7 +386,7 @@ namespace ZombiesRound
 
         private void RemoveT_btn_Click(object sender, RoutedEventArgs e)
         {
-            if (listD.SelectedIndex == -1)
+            if (listT.SelectedIndex == -1)
             {
                 MessageBox.Show("Select a round!");
             }
@@ -440,6 +442,7 @@ namespace ZombiesRound
             mytextboxB.Clear();
             mytextboxC.Clear();
             mytextboxD.Clear();
+            mytextboxT.Clear();
             
         }
         private void home()
