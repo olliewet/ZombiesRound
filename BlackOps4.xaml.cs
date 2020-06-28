@@ -31,6 +31,7 @@ namespace ZombiesRound
         string queryE = "select * from ZombiesRounds where Map='Blood'";
         string queryF = "select * from ZombiesRounds where Map='Class'";
         string queryDE = "select * from ZombiesRounds where Map='Dead'";
+        string queryT = "select * from ZombiesRounds where Map='Tag'";
         string queryR = "delete from ZombiesRounds where id = @ZombiesRoundsId";
         #endregion
 
@@ -240,6 +241,24 @@ namespace ZombiesRound
                 SqlConnect.ShowRound(listD, queryDE, sqlConnection);
             }
         }
+        private void AddRoundT_Click(object sender, RoutedEventArgs e)
+        {
+            string text;
+            int round;
+            string map = "Tag";
+            text = mytextboxT.Text;
+
+            if (!int.TryParse(text, out round))
+            {
+                MessageBox.Show("Not an integer");
+            }
+
+            else
+            {
+                SqlConnect.AddRound(listD, queryT, sqlConnection, map, round);
+                SqlConnect.ShowRound(listD, queryT, sqlConnection);
+            }
+        }
 
         #endregion 
 
@@ -264,6 +283,10 @@ namespace ZombiesRound
         {
 
         }
+        private void listT_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
         #endregion
 
         #region Remove Buttons
@@ -276,8 +299,6 @@ namespace ZombiesRound
             }
             else
             {
-
-
                 SqlConnect.RemoveRound(listRounds, queryR, sqlConnection);
                 SqlConnect.ShowRound(listRounds, queryA, sqlConnection);
             }
@@ -360,6 +381,19 @@ namespace ZombiesRound
             }
         }
 
+
+        private void RemoveT_btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (listD.SelectedIndex == -1)
+            {
+                MessageBox.Show("Select a round!");
+            }
+            else
+            {
+                SqlConnect.RemoveRound(listT, queryR, sqlConnection);
+                SqlConnect.ShowRound(listT, queryT, sqlConnection);
+            }
+        }
         #endregion
 
         #region Home 
@@ -386,6 +420,11 @@ namespace ZombiesRound
             home();
         }
         private void HomeD_Click(object sender, RoutedEventArgs e)
+        {
+            home();
+        }
+
+        private void HomeT_Click(object sender, RoutedEventArgs e)
         {
             home();
         }
@@ -422,8 +461,13 @@ namespace ZombiesRound
 
 
 
+
         #endregion
 
-          
+      
+
+        
+
+
     }
 }

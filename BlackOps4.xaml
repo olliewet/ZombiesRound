@@ -205,6 +205,15 @@
                         <ImageBrush ImageSource="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4 maps\tag.png" Stretch="UniformToFill"/>
                     </Grid.Background>
                     <Label Content="tag" Foreground="White" Grid.Column="1" HorizontalAlignment="Left" Margin="10,30,0,0" VerticalAlignment="Top"/>
+                    <TextBox Name="mytextboxT" HorizontalAlignment="Left" Height="32" Margin="10,343,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="190" Grid.ColumnSpan="2"/>
+                    <Button x:Name ="AddRoundT" Content="Add Round" HorizontalAlignment="Left" Margin="205,343,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="AddRoundT_Click"/>
+                    <ListBox x:Name ="listT" HorizontalAlignment="Left" Height="277" Margin="10,61,0,0" VerticalAlignment="Top" Width="190" SelectionChanged="listT_SelectionChanged" Grid.ColumnSpan="2"/>
+                    <Button x:Name ="RemoveT_btn" Content="Remove Round" HorizontalAlignment="Left" Margin="205,306,0,0" VerticalAlignment="Top" Width="158" Height="32" Click="RemoveT_btn_Click"/>
+                    <Button x:Name ="HomeT"  Background="Transparent" BorderThickness="0"  Margin="472,10,10,0" VerticalAlignment="Top" Width="150" Height="100" Click="HomeT_Click" Grid.Column="1">
+                        <StackPanel>
+                            <Image Source="C:\Users\Ollie\Desktop\Work\Zombies Project\Assets\BO4.png" Height="78" Width="103"  />
+                        </StackPanel>
+                    </Button>
                 </Grid>
             </TabItem>
         </TabControl>
